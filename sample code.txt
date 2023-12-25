@@ -1,0 +1,152 @@
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
+hide.bs.modal 	This event is fired immediately when the hide instance method has been called.
+hidden.bs.modal 	This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).
+hidePrevented.bs.modal 	This event is fired when the modal is shown, its backdrop is static and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the keyboard option is set to false.
+show.bs.modal 	This event fires immediately when the show instance method is called. If caused by a click, the clicked element is available as the relatedTarget property of the event.
+shown.bs.modal 	This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the relatedTarget property of the event.
+
+
+const myModalEl = document.getElementById('myModal')
+myModalEl.addEventListener('hidden.bs.modal', event => {
+  // do something...
+})
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+    const url = "http://localhost:5000/api/v3/gallery/add";
+    const formData = new FormData();
+    formData.append("avatar", image);
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+        "auth-token":
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjU3ZjNjYTExZDY5MmQ0NGE3MTc2MmFiIn0sImlhdCI6MTcwMjgzNzQwOX0.MXI72xBU78ZZFXieVaFZrkzQhmpNxJ6M1aRfWjL0ztQ",
+      },
+    };
+    axios.post(url, formData, config).then((response) => {
+      console.log(response);
+    });
+  };
+  <input
+            type="file"
+            name="avatar"
+            onChange={(event) => {
+              setImage(event.target.files[0]);
+            }}
+            hidden
+          />
+
+<div class="containers container" id="container">
+          <div class="form-container sign-up">
+            <form>
+              <h1>Create Account</h1>
+              <div class="social-icons">
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-google"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-facebook"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-github"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-linkedin"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+              </div>
+              <span>or use your email to registration</span>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <button>Sign Up</button>
+            </form>
+          </div>
+          <div class="form-container sign-in">
+            <div className="log">
+              <h1>Sign In</h1>
+              <div class="social-icons">
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-google"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-facebook"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-github"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+                <a href="#" class="icons">
+                  <i
+                    class="bi bi-linkedin"
+                    style={{ color: "#13a365", fontSize: "20px" }}
+                  ></i>
+                </a>
+              </div>
+              <span>or use your email/password</span>
+              <input
+                onChange={onChange}
+                name="username"
+                value={credentials.username}
+                type="text"
+                placeholder="Username"
+              />
+              <input
+                onChange={onChange}
+                name="password"
+                value={credentials.password}
+                type="password"
+                placeholder="Password"
+              />
+              <a href="#">Forget your Password?</a>
+              <button onClick={handleSubmit}>Sign In</button>
+            </div>
+          </div>
+          <div class="toggle-container">
+            <div class="toggle">
+              <div class="toggle-panel toggle-left">
+                <h1>Welcome Back!</h1>
+                <p>Enter your Personal details to use all of site features</p>
+                <button class="hidden" id="login">
+                  Sign In
+                </button>
+              </div>
+              <div class="toggle-panel toggle-right">
+                <h1>Hello, Friend!</h1>
+                <p>
+                  Register with your Personal details to use all of site
+                  features
+                </p>
+                <button class="hidden" id="register">
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+this => 6586f214866942a145ea906b,is deleted by this user => eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjU4NmU2NDY4NjY5NDJhMTQ1ZTk4ZDdhIn0sImlhdCI6MTcwMzM5MzE1MH0.APFLHFRS6v2gbI_HbiXFtBbGy864IQd7JlVzy0KKbHo
